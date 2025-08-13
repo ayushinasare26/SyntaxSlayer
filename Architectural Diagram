@@ -1,4 +1,4 @@
-kArchitectural Diagram
+Architectural Diagram
 
 
          ┌─────────────────────────────────────────────┐
@@ -48,11 +48,13 @@ Data flow diagram
         │ Vehicle Detection (AI Model)  │
         └──────────┬────────────────────┘
                    │ 3. Detected Vehicle Data
+                        Lane wise count
                    ▼
         ┌───────────────────────────────┐
         │ Traffic Density Calculation   │
         └──────────┬────────────────────┘
                    │ 4. Density Metrics
+                        Based on queue length
                    ▼
         ┌───────────────────────────────┐
         │ Dynamic Signal Timing Decision│
