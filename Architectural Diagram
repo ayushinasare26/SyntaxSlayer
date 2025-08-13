@@ -70,7 +70,12 @@ Data flow diagram
         │ Traffic Lights                │
         └───────────────────────────────┘
 
+
+   Edge Processor:
+         Local computing deice
+         Object detection
+
    Optional Flows:
-   - Violation Data → ANPR → Violation Database
-   - Density & Timing Logs → Traffic Monitoring Dashboard
+         Violation Data → ANPR → Violation Database
+         Density & Timing Logs → Traffic Monitoring Dashboard
 IT will continue
