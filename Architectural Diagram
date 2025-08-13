@@ -1,0 +1,73 @@
+Architectural Diagram
+
+
+         ┌─────────────────────────────────────────────┐
+         │               CCTV Cameras                  │
+         └───────────────────┬─────────────────────────┘
+                             │ Video Stream
+                             ▼
+              ┌──────────────────────────────────┐
+              │   Edge/Cloud Processing Unit      │
+              │ ──────────────────────────────── │
+              │ 1. Frame Extraction               │
+              │ 2. Preprocessing                   │
+              │ 3. Vehicle Detection (AI Model)    │
+              │ 4. Density Calculation             │
+              │ 5. Decision Logic (Timing Calc)    │
+              └───────────────────┬────────────────┘
+                                  │ Commands
+                                  ▼
+                ┌──────────────────────────────────┐
+                │ Traffic Light Controller (MCU)    │
+                └───────────────────┬───────────────┘
+                                    │ Electrical Signals
+                                    ▼
+                        ┌─────────────────────────┐
+                        │ Traffic Signal Lights    │
+                        └─────────────────────────┘
+
+        (Optionals)
+        - ANPR Camera → License Plate Recognition → Violation DB
+        - Dashboard → Live Monitoring & Reports
+
+
+
+Data flow diagram
+
+          ┌──────────────────────────┐
+          │ CCTV Cameras              │
+          └──────────┬───────────────┘
+                     │ 1. Live Video Feed
+                     ▼
+        ┌───────────────────────────────┐
+        │ Frame Extraction & Preprocessing│
+        └──────────┬─────────────────────┘
+                   │ 2. Processed Frames
+                   ▼
+        ┌───────────────────────────────┐
+        │ Vehicle Detection (AI Model)  │
+        └──────────┬────────────────────┘
+                   │ 3. Detected Vehicle Data
+                   ▼
+        ┌───────────────────────────────┐
+        │ Traffic Density Calculation    │
+        └──────────┬────────────────────┘
+                   │ 4. Density Metrics
+                   ▼
+        ┌───────────────────────────────┐
+        │ Dynamic Signal Timing Decision │
+        └──────────┬────────────────────┘
+                   │ 5. Timing Commands
+                   ▼
+        ┌───────────────────────────────┐
+        │ Traffic Light Controller (MCU)│
+        └──────────┬────────────────────┘
+                   │ 6. Light Control Signals
+                   ▼
+        ┌───────────────────────────────┐
+        │ Traffic Lights                 │
+        └───────────────────────────────┘
+
+   Optional Flows:
+   - Violation Data → ANPR → Violation Database
+   - Density & Timing Logs → Traffic Monitoring Dashboard
