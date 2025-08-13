@@ -6,10 +6,10 @@ Architectural Diagram
          └───────────────────┬─────────────────────────┘
                              │ Video Stream
                              ▼
-              ┌──────────────────────────────────┐
-              │   Edge/Cloud Processing Unit      │
-              │ ──────────────────────────────── │
-              │ 1. Frame Extraction               │
+              ┌────────────────────────────────────┐
+              │   Edge/Cloud Processing Unit       │
+              │ ────────────────────────────────── │
+              │ 1. Frame Extraction                │
               │ 2. Preprocessing                   │
               │ 3. Vehicle Detection (AI Model)    │
               │ 4. Density Calculation             │
@@ -17,13 +17,13 @@ Architectural Diagram
               └───────────────────┬────────────────┘
                                   │ Commands
                                   ▼
-                ┌──────────────────────────────────┐
-                │ Traffic Light Controller (MCU)    │
-                └───────────────────┬───────────────┘
+                ┌────────────────────────────────────┐
+                │ Traffic Light Controller (MCU)     │
+                └───────────────────┬────────────────┘
                                     │ Electrical Signals
                                     ▼
                         ┌─────────────────────────┐
-                        │ Traffic Signal Lights    │
+                        │ Traffic Signal Lights   │
                         └─────────────────────────┘
 
         (Optionals)
@@ -35,13 +35,13 @@ Architectural Diagram
 Data flow diagram
 
           ┌──────────────────────────┐
-          │ CCTV Cameras              │
+          │ CCTV Cameras             │
           └──────────┬───────────────┘
                      │ 1. Live Video Feed
                      ▼
-        ┌───────────────────────────────┐
+        ┌─────────────────────────────────┐
         │ Frame Extraction & Preprocessing│
-        └──────────┬─────────────────────┘
+        └──────────┬──────────────────────┘
                    │ 2. Processed Frames
                    ▼
         ┌───────────────────────────────┐
@@ -50,12 +50,12 @@ Data flow diagram
                    │ 3. Detected Vehicle Data
                    ▼
         ┌───────────────────────────────┐
-        │ Traffic Density Calculation    │
+        │ Traffic Density Calculation   │
         └──────────┬────────────────────┘
                    │ 4. Density Metrics
                    ▼
         ┌───────────────────────────────┐
-        │ Dynamic Signal Timing Decision │
+        │ Dynamic Signal Timing Decision│
         └──────────┬────────────────────┘
                    │ 5. Timing Commands
                    ▼
@@ -65,7 +65,7 @@ Data flow diagram
                    │ 6. Light Control Signals
                    ▼
         ┌───────────────────────────────┐
-        │ Traffic Lights                 │
+        │ Traffic Lights                │
         └───────────────────────────────┘
 
    Optional Flows:
