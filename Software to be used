@@ -1,0 +1,44 @@
+1. AI & Computer Vision Software
+      These handle vehicle detection, classification, and density estimation.
+      
+      Python – Main programming language for AI logic.
+      
+      OpenCV – For frame extraction, preprocessing, ROI masking, and visualization.
+      
+      YOLOv8 / YOLOv5 (via Ultralytics) – Real-time object detection.
+      
+      TensorFlow or PyTorch – For training or fine-tuning models.
+      
+      NumPy / Pandas – For handling detection data and traffic metrics.
+
+2. Video Streaming & Processing
+      FFmpeg – For handling live CCTV video streams.
+      
+      RTSP Protocol – For receiving camera feed directly.
+      
+      GStreamer – (Optional) for optimized streaming pipelines.
+
+3. Traffic Control Software
+      Arduino IDE – If using Arduino to control lights.
+      
+      Raspberry Pi OS + Python GPIO – If using Raspberry Pi for direct signal control.
+      
+      PLC Programming Software (e.g., Siemens TIA Portal) – If using industrial controllers.
+
+4. Data Storage & Backend
+      MySQL / PostgreSQL – For storing traffic density logs, violation data.
+      
+      SQLite – Lightweight option if logging locally on edge devices.
+
+5. Dashboard & Monitoring
+      Flask or Django – For creating a web dashboard to monitor traffic data.
+      
+      Grafana – For real-time analytics & visualization.
+      
+      HTML/CSS/JavaScript – For custom dashboard front-end.
+
+6. Optional ANPR (Violation Detection)
+      OpenALPR or EasyOCR – For automatic number plate recognition.
+      
+      Tesseract OCR – For text recognition in license plates.
+
