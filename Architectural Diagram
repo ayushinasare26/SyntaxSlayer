@@ -1,4 +1,4 @@
-Architectural Diagram
+kArchitectural Diagram
 
 
          ┌─────────────────────────────────────────────┐
@@ -71,3 +71,4 @@ Data flow diagram
    Optional Flows:
    - Violation Data → ANPR → Violation Database
    - Density & Timing Logs → Traffic Monitoring Dashboard
+IT will continue
