@@ -73,3 +73,36 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
+
+
+
+
+
+Optional: Integrate with Real Traffic Light Hardware
+If you are using a Raspberry Pi with LEDs:
+
+import RPi.GPIO as GPIO
+
+# Example GPIO pin setup (adjust to your wiring)
+GREEN_PIN = 17
+YELLOW_PIN = 27
+RED_PIN = 22
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(GREEN_PIN, GPIO.OUT)
+GPIO.setup(YELLOW_PIN, GPIO.OUT)
+GPIO.setup(RED_PIN, GPIO.OUT)
+
+def set_light(green, yellow, red):
+    GPIO.output(GREEN_PIN, green)
+    GPIO.output(YELLOW_PIN, yellow)
+    GPIO.output(RED_PIN, red)
+
+# Example usage in main loop
+set_light(1, 0, 0)  # Green ON
+time.sleep(green_time)
+set_light(0, 1, 0)  # Yellow ON
+time.sleep(yellow_duration)
+set_light(0, 0, 1)  # Red ON
+time.sleep(red_duration)
+
